@@ -1,15 +1,12 @@
 public class Main {
     public static void main(String[] args) {
         BonusMilesService service = new BonusMilesService();
-        int account = 656; // начальный аккаунт
-        int price = 10_000; // сумма пополнения
-        int miles = service.calculate(price); // начисляемые бонусные рубли
-        int final_account = account + price + miles; // итоговый счет после пополнения
+        int price = 10_000; //Водим цену билета
+        int miles = service.calculate(price); // начисляемые бонусные мили
 
-        String rub = " руб.";
-        String acc = "Баланс счета: ";
-        String gratification = "Начисленные бонусные рубли: ";
-        System.out.println(gratification + miles + rub);
-        System.out.println(acc + final_account + rub);
+
+        String name = " Бонусных миль";
+        System.out.println("На вашем счете:");
+        System.out.println(miles + name);
     }
 }
